@@ -57,15 +57,7 @@ TauTriggerBarrel_90perc_highPt:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    object: "GenVisTau"
-    x_arg: "pt"
-    label: "Gen Taus"
-    cuts:
-      event:
-        # - "{dr_0.3} < 0.15"
-        - "abs({eta}) < 1.5"
-      object:
-        - "abs({eta}) < 2.4"
+    GenVisTau:tau:barrel: "pt" # TODO: atm this Config is the same as tau_matching. Shouldnt there be a pt cut? 
   test_objects:
     L1nnPuppiTau:default:barrel: "pt"
     L1hpsTau:default:barrel: "pt"
@@ -74,9 +66,6 @@ TauTriggerBarrel_90perc_highPt:
   xlabel: "Gen. pT (GeV)"
   ylabel: "Trigger Efficiency (barrel, L1 $p_T > <threshold>$ GeV)"
   thresholds: [30, 50]
-  # scalings:
-  #   method: "naive"
-  #   threshold: 0.90
   binning:
     min: 0
     max: 400
@@ -87,15 +76,7 @@ TauTriggerEndcap_90perc_highPt:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    object: "GenVisTau"
-    x_arg: "pt"
-    label: "Gen Taus"
-    cuts:
-      event:
-        # - "{dr_0.3} < 0.15"
-        - "abs({eta}) > 1.5"
-      object:
-        - "abs({eta}) < 2.4"
+    GenVisTau:tau:barrel: "pt" # TODO same as above, atm it is the same as Config as tau_matching.yaml
   test_objects:
     L1nnPuppiTau:default:endcap: "pt"
     L1hpsTau:default:endcap: "pt"
@@ -104,9 +85,6 @@ TauTriggerEndcap_90perc_highPt:
   xlabel: "Gen. pT (GeV)"
   ylabel: "Trigger Efficiency (endcap, L1 $p_T > <threshold>$ GeV)"
   thresholds: [30, 50]
-  # scalings:
-  #   method: "naive"
-  #   threshold: 0.90
   binning:
     min: 0
     max: 400

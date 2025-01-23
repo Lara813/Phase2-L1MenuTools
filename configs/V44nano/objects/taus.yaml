@@ -59,3 +59,29 @@ L1nnCaloTau:
         inclusive:
           - "abs({eta}) < 2.4"
           - "{hwQual}==3"
+
+# GenVisTau: 
+#   label: "Gen Taus"
+#   # match_dR: TODO be asked wha not match ref etc? 
+#   eta_ranges: 
+#     inclusive: [0, 2.4]
+#     barrel: [0, 1.5]
+#     endcap: [1.5, 2.4] # TODO: in tau_tau_matching_eta.yaml the highest eta is 5, where in tau_mathcing.yaml only 2.4
+#   ids:
+#     tau:
+#       cuts:
+#         events: 
+#           inclusive:
+#             - "abs({eta}) < 1.5"
+#     tau_Pt40To100:
+#       cuts:
+#         events: 
+#           inclusive:
+#             - "{pt} > 40"
+#             - "{pt} < 100"
+#     tau_Pt100ToInf:
+#       cuts:
+#         events: 
+#           inclusive:
+#             - "{pt} > 100"
+    

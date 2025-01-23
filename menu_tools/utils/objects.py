@@ -291,6 +291,14 @@ def compute_selection_mask_for_cuts(
     if "eta" not in ak_array.fields:
         ak_array["eta"] = 0
 
+    # TODO: merge 'event' and 'object' cuts 
+    if "Gen" in obj.nano_obj_name:
+        try: 
+            cuts = cuts["event"]
+        except Exception as e: 
+            print(e)
+            print(f"{obj.nano_obj_name} has no cuts differentiated on event and object level")
+
     for range_i, range_cuts in cuts.items():
         # Initialize temporary mask (for rangei) with True everywhere
         _sel = ak.ones_like(ak_array[ak_array.fields[0]]) > 0

@@ -15,21 +15,22 @@ GenPart:
           - "abs({eta}) < 3"
           - "(({statusFlags}>>7)&1) == 1"
           - "abs({pdgId}) == 11"
-    muon:
+    _muon: # TODO: why are there two muons? 
       label: "Gen Muon"
       cuts:
         inclusive:
           - "abs({eta}) < 3"
           - "(({statusFlags}>>7)&1) == 1"
           - "abs({pdgId}) == 13"
-    reference_muon:
+    muon:
       label: "Gen Muons"
       cuts:
         event:
           inclusive:
-            - "(({statusFlags}>>7)&1) == 1"
-            - "abs({pdgId}) == 13"
-    reference_muon_Pt2to5:
+          - "(({statusFlags}>>7)&1) == 1"
+          - "abs({pdgId}) == 13"
+          
+    muon_Pt2to5:
       label: "Gen Muons"
       cuts:
         event:
@@ -41,7 +42,7 @@ GenPart:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_muon_Pt15toInf:
+    muon_Pt15toInf:
       label: "Gen Muons"
       cuts:
         event:
@@ -52,7 +53,7 @@ GenPart:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_electron_barrel:
+    electron_barrel:
       label: "Gen Electron"
       cuts:
         event:
@@ -63,14 +64,14 @@ GenPart:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_electron:
+    electron:
       label: "Gen Electron"
       cuts:
         event:
           inclusive:
-            - "(({statusFlags}>>7)&1) == 1"
-            - "abs({pdgId}) == 11"
-    reference_electron_endcap:
+            - "(({statusFlags}>>7)&1) == 1" # >>7 is bit shift, &1 looks at this bit and looks if it is 1  
+            - "abs({pdgId}) == 11" # PDG ID 
+    electron_endcap:
       label: "Gen Electron Endcap"
       cuts:
         event:
@@ -81,7 +82,7 @@ GenPart:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_electron_pt10to25:
+    electron_pt10to25:
       label: "Gen Electron $p_T=10-25$GeV"
       cuts:
         event:
@@ -93,7 +94,7 @@ GenPart:
         object:
           inclusive:
             - "abs({eta}) < 3.0"
-    reference_electron_pt25toInf:
+    electron_pt25toInf:
       label: "Gen Electron $p_T>25$GeV"
       cuts:
         event:
@@ -104,7 +105,7 @@ GenPart:
         object:
           inclusive:
             - "abs({eta}) < 3.0"
-    reference_electron_trigger_barrel:
+    electron_trigger_barrel:
       cuts:
         event:
           inclusive:
@@ -114,7 +115,7 @@ GenPart:
         object:
           inclusive:
             - "abs({eta}) < 2.8"
-    reference_electron_trigger_endcap:
+    electron_trigger_endcap:
       cuts:
         event:
           inclusive:
@@ -124,3 +125,54 @@ GenPart:
         object:
           inclusive:
             - "abs({eta}) < 2.8"
+    photon:
+      cuts:
+        event:
+          inclusive:
+            - "(({statusFlags}>>7)&1) == 1"
+            - "abs({pdgId}) == 22"
+            - "abs({eta}) > 1.5" # TODO could be removed, and also sometimes 1.479 and somteimes 1.5 is called. Is the difference necessary? 
+    photon_Pt25toInf:
+      cuts:
+        event:
+          inclusive:
+            - "(({statusFlags}>>7)&1) == 1"
+            - "abs({pdgId}) == 22"
+            - "{pt} < 25"
+          # object:
+          #   - "abs({eta}) < 3.0"
+    photon_Pt10to25:
+      cuts:
+        event:
+          inclusive:
+            - "(({statusFlags}>>7)&1) == 1"
+            - "abs({pdgId}) == 22"
+            - "{pt} < 25"
+            - "{pt} > 10"
+          # object:
+          #   - "abs({eta}) < 3.0"
+
+GenVisTau: 
+  label: "Gen Taus"
+  # match_dR: TODO be asked wha not match ref etc? 
+  eta_ranges: 
+    inclusive: [0, 2.4]
+    barrel: [0, 1.5]
+    endcap: [1.5, 2.4] # TODO: in tau_tau_matching_eta.yaml the highest eta is 5, where in tau_mathcing.yaml only 2.4
+  ids:
+    tau:
+      cuts:
+        events: 
+          inclusive:
+            - "abs({eta}) < 1.5"
+    tau_Pt40To100:
+      cuts:
+        events: 
+          inclusive:
+            - "{pt} > 40"
+            - "{pt} < 100"
+    tau_Pt100ToInf:
+      cuts:
+        events: 
+          inclusive:
+            - "{pt} > 100"

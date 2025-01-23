@@ -181,12 +181,18 @@ class TurnOnCollection:
         this function already has cuts applied in `apply_reference_cuts`.
         `_mht` is an `ak.Array()` with one entry (MHT) per event.
         """
-        _px = self.ak_arrays["ref"].px
-        _py = self.ak_arrays["ref"].py
-        _mht = np.sqrt(
-            ak.sum(_px[:, :], axis=-1, keepdims=True) ** 2
-            + ak.sum(_py[:, :], axis=-1, keepdims=True) ** 2
-        )
+        
+        try: 
+            _px = self.ak_arrays["ref"].px
+            _py = self.ak_arrays["ref"].py
+            _mht = np.sqrt(
+                ak.sum(_px[:, :], axis=-1, keepdims=True) ** 2
+                + ak.sum(_py[:, :], axis=-1, keepdims=True) ** 2
+            )
+        except Exception as e: 
+            _pt = self.ak_arrays["ref"].pt
+            _mht = ak.sum(_pt[:, :], axis=-1, keepdims=True)
+            print(f"{e}, pt used instead to calculate MHT")
         return _mht
 
     def _reduce_to_per_event(self):

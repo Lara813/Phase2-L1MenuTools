@@ -3,15 +3,7 @@ TausMatchingBarrel:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    object: "GenVisTau"
-    x_arg: "pt"
-    label: "Gen Taus"
-    cuts:
-      event:
-        # - "{dr_0.3} < 0.15"
-        - "abs({eta}) < 1.5"
-      object:
-        - "abs({eta}) < 2.4"
+    GenVisTau:tau:barrel: "pt"
   test_objects:
     L1nnPuppiTau:default: "pt"
     L1hpsTau:default: "pt"
@@ -30,15 +22,7 @@ TausMatchingEndcap:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    object: "GenVisTau"
-    x_arg: "pt"
-    label: "Gen Taus"
-    cuts:
-      event:
-        # - "{dr_0.3} < 0.15"
-        - "abs({eta}) > 1.5"
-      object:
-        - "abs({eta}) < 2.4"
+    GenVisTau:tau:endcap: "pt"
   test_objects:
     L1nnPuppiTau:default: "pt"
     L1hpsTau:default: "pt"

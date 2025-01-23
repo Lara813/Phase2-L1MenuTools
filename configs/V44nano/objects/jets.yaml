@@ -6,7 +6,7 @@ GenJetAK8:
     endcap: [1.5, 2.4]
     forward: [2.4, 5]
   ids:
-    reference_matching_SC8_Pt100ToInf:
+    jet_matching_SC8_Pt100ToInf:
       cuts:
         event:
           inclusive:
@@ -14,7 +14,7 @@ GenJetAK8:
         object:
           inclusive:
             - "abs({eta}) < 5"
-    reference_barrel:
+    jet_barrel:
       cuts:
         event:
           inclusive:
@@ -22,7 +22,7 @@ GenJetAK8:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_endcap:
+    jet_endcap:
       cuts:
         event:
           inclusive:
@@ -30,7 +30,7 @@ GenJetAK8:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_forward:
+    jet_forward:
       cuts:
         event:
           inclusive:
@@ -63,7 +63,7 @@ GenJet:
           inclusive:
             - "abs({eta}) < 2.4"
             - "{pt} > 30"
-    reference_Pt40To100:
+    jet_Pt40To100:
       label: "Gen Jets"
       cuts:
         event:
@@ -73,7 +73,7 @@ GenJet:
         object:
           inclusive:
             - "abs({eta}) < 5"
-    reference_Pt100ToInf:
+    jet_Pt100ToInf:
       label: "Gen Jets"
       cuts:
         event:
@@ -82,7 +82,7 @@ GenJet:
         object:
           inclusive:
             - "abs({eta}) < 5"
-    reference_Pt100ToInf_extEta:
+    jet_Pt100ToInf_extEta:
       label: "Gen Jets"
       cuts:
         event:
@@ -91,7 +91,7 @@ GenJet:
         object:
           inclusive:
             - "abs({eta}) < 7"
-    reference_Pt30ToInf_genBJets:
+    jet_Pt30ToInf_genBJets:
       label: "Gen Jets"
       cuts:
         event:
@@ -101,7 +101,7 @@ GenJet:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_Pt30ToInf_genNotBJets:
+    jet_Pt30ToInf_genNotBJets:
       label: "Gen Jets"
       cuts:
         event:
@@ -111,7 +111,7 @@ GenJet:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_barrel:
+    jet_barrel:
       label: "Gen Jets"
       cuts:
         event:
@@ -120,7 +120,7 @@ GenJet:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_endcap:
+    jet_endcap:
       label: "Gen Jets"
       cuts:
         event:
@@ -129,7 +129,7 @@ GenJet:
         object:
           inclusive:
             - "abs({eta}) < 2.4"
-    reference_forward:
+    jet_forward:
       label: "Gen Jets"
       cuts:
         event:
