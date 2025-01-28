@@ -4,8 +4,10 @@ GenPart:
     inclusive: [0, 7]
     barrel: [0, 1.479]
     barrel_muon: [0, 0.83]
+    barrel_photon: [0, 1.5]
     overlap: [0.83, 1.24]
     endcap: [1.479, 5]
+    endcap_photon: [1.479, 2.4]
     endcap_muon: [1.24, 2.4]
   ids:
     electron:
@@ -25,154 +27,232 @@ GenPart:
     muon:
       label: "Gen Muons"
       cuts:
-        event:
-          inclusive:
-          - "(({statusFlags}>>7)&1) == 1"
-          - "abs({pdgId}) == 13"
+        # event:
+        inclusive:
+        - "(({statusFlags}>>7)&1) == 1"
+        - "abs({pdgId}) == 13"
           
     muon_Pt2to5:
       label: "Gen Muons"
       cuts:
-        event:
-          inclusive:
-            - "(({statusFlags}>>7)&1) == 1"
-            - "abs({pdgId}) == 13"
-            - "{pt} > 2"
-            - "{pt} < 5"
-        object:
-          inclusive:
-            - "abs({eta}) < 2.4"
+        # event:
+        inclusive:
+          - "(({statusFlags}>>7)&1) == 1"
+          - "abs({pdgId}) == 13"
+          - "{pt} > 2"
+          - "{pt} < 5"
+      # object:
+        # inclusive:
+          - "abs({eta}) < 2.4"
     muon_Pt15toInf:
       label: "Gen Muons"
       cuts:
-        event:
-          inclusive:
-            - "(({statusFlags}>>7)&1) == 1"
-            - "abs({pdgId}) == 13"
-            - "{pt} > 15"
-        object:
-          inclusive:
-            - "abs({eta}) < 2.4"
+        # event:
+        inclusive:
+          - "(({statusFlags}>>7)&1) == 1"
+          - "abs({pdgId}) == 13"
+          - "{pt} > 15"
+      # object:
+        # inclusive:
+          - "abs({eta}) < 2.4"
     electron_barrel:
       label: "Gen Electron"
       cuts:
-        event:
+        object:
+      # event:
           inclusive:
             - "(({statusFlags}>>7)&1) == 1"
             - "abs({pdgId}) == 11"
             - "abs({eta}) < 1.479"
-        object:
-          inclusive:
+        # object:
+          # inclusive:
             - "abs({eta}) < 2.4"
     electron:
       label: "Gen Electron"
       cuts:
-        event:
+        object:
+      # event:
           inclusive:
             - "(({statusFlags}>>7)&1) == 1" # >>7 is bit shift, &1 looks at this bit and looks if it is 1  
             - "abs({pdgId}) == 11" # PDG ID 
     electron_endcap:
       label: "Gen Electron Endcap"
       cuts:
-        event:
+        object:
+      # event:
           inclusive:
             - "(({statusFlags}>>7)&1) == 1"
             - "abs({pdgId}) == 11"
             - "abs({eta}) > 1.479"
-        object:
-          inclusive:
+        # object:
+          # inclusive:
             - "abs({eta}) < 2.4"
     electron_pt10to25:
       label: "Gen Electron $p_T=10-25$GeV"
       cuts:
-        event:
+        object:
+      #event:
           inclusive:
             - "(({statusFlags}>>7)&1) == 1"
             - "abs({pdgId}) == 11"
             - "{pt} < 25"
             - "{pt} > 10"
-        object:
-          inclusive:
+        # object:
+          # inclusive:
             - "abs({eta}) < 3.0"
     electron_pt25toInf:
       label: "Gen Electron $p_T>25$GeV"
       cuts:
-        event:
+        object:
+        # event:
           inclusive:
             - "(({statusFlags}>>7)&1) == 1"
             - "abs({pdgId}) == 11"
             - "{pt} > 25"
-        object:
-          inclusive:
+        # object:
+          # inclusive:
             - "abs({eta}) < 3.0"
     electron_trigger_barrel:
       cuts:
-        event:
+        object:
+        # event:
           inclusive:
             - "(({statusFlags}>>7)&1) == 1"
             - "abs({pdgId}) == 11"
             - "abs({eta}) < 1.5"
-        object:
-          inclusive:
+        # object:
+          # inclusive:
             - "abs({eta}) < 2.8"
     electron_trigger_endcap:
       cuts:
-        event:
+        object:
+        # event:
           inclusive:
             - "(({statusFlags}>>7)&1) == 1"
             - "abs({pdgId}) == 11"
             - "abs({eta}) > 1.5"
-        object:
-          inclusive:
+        # object:
+          # inclusive:
             - "abs({eta}) < 2.8"
     photon:
       cuts:
-        event:
+        object:
           inclusive:
             - "(({statusFlags}>>7)&1) == 1"
             - "abs({pdgId}) == 22"
-            - "abs({eta}) > 1.5" # TODO could be removed, and also sometimes 1.479 and somteimes 1.5 is called. Is the difference necessary? 
+            # - "abs({eta}) < 1.479"
+    photon_barrel:
+      cuts:
+        object:
+          inclusive:
+            - "(({statusFlags}>>7)&1) == 1"
+            - "abs({pdgId}) == 22"
+            - "abs({eta}) < 1.5"
+            - "abs({eta}) < 2.4"
+    photon_endcap:
+      cuts:
+        object:
+          inclusive:
+            - "(({statusFlags}>>7)&1) == 1"
+            - "abs({pdgId}) == 22"
+            - "abs({eta}) > 1.5"
+            - "abs({eta}) < 2.4"
     photon_Pt25toInf:
       cuts:
-        event:
-          inclusive:
+        inclusive:
             - "(({statusFlags}>>7)&1) == 1"
             - "abs({pdgId}) == 22"
-            - "{pt} < 25"
-          # object:
-          #   - "abs({eta}) < 3.0"
+            - "{pt} >= 25"
+            - "abs({eta}) < 3.0"
+        # object:
+        #   inclusive:
+        #     - "(({statusFlags}>>7)&1) == 1"
+        #     - "abs({pdgId}) == 22"
+        #     - "{pt} >= 25"
+        #     - "abs({eta}) < 3.0"
+        # event:
+        #   inclusive:  
+        #     - "{pt} >= 25"
+        # # object:
+        # #   - "abs({eta}) < 3.0"
     photon_Pt10to25:
       cuts:
-        event:
+        object:
           inclusive:
             - "(({statusFlags}>>7)&1) == 1"
             - "abs({pdgId}) == 22"
             - "{pt} < 25"
             - "{pt} > 10"
-          # object:
-          #   - "abs({eta}) < 3.0"
+            - "abs({eta}) < 3.0"
+        # event: 
+        #   inclusive:
+        #     - "{pt} < 25"
+        #     - "{pt} > 10"
+        # # object:
+        # #   - "abs({eta}) < 3.0"
 
 GenVisTau: 
   label: "Gen Taus"
-  # match_dR: TODO be asked wha not match ref etc? 
+  # TODO: match_dR? 
   eta_ranges: 
-    inclusive: [0, 2.4]
+    inclusive: [0, 7]
     barrel: [0, 1.5]
-    endcap: [1.5, 2.4] # TODO: in tau_tau_matching_eta.yaml the highest eta is 5, where in tau_mathcing.yaml only 2.4
+    endcap: [1.5, 5]
   ids:
-    tau:
-      cuts:
-        events: 
-          inclusive:
+    default:
+      cuts: 
+          inclusive: 
+            # - "abs({eta}) > 1.5"
+            # - "abs({eta}) < 2.4"
+            - "abs({eta}) < 2.4"
+    _barrel: 
+      cuts: 
+        event: 
+          inclusive: 
             - "abs({eta}) < 1.5"
+        object:
+          inclusive:
+            # - "abs({eta}) < 1.5"
+            - "abs({eta}) < 2.4"
+    _endcap: 
+      cuts:
+        event: 
+          inclusive: 
+            - "abs({eta}) > 1.5" 
+        object: 
+          inclusive: 
+            # - "abs({eta}) > 1.5"
+            - "abs({eta}) < 2.4"
+    # tau: #NOTE: als default umbenennen  
+    #   cuts:
+    #     # events: 
+    #     inclusive:
+    #       # - "abs({eta}) < 2.4" # Changed from 1.5 
+    # with_object: #NOTE: als default umbenennen  
+    #   cuts:
+    #     events:
+    #       inclusive:
+    #       # - "{dr_0.3} < 0.15"
+    #         - "abs({eta}) < 1.5"
+    #     object:
+    #       inclusive:
+    #         - "abs({eta}) < 1.5"
     tau_Pt40To100:
       cuts:
-        events: 
+        object:
+        # events: 
           inclusive:
             - "{pt} > 40"
             - "{pt} < 100"
+        # object:
+          # inclusive:
+            - "abs({eta}) < 2.4" 
     tau_Pt100ToInf:
       cuts:
-        events: 
+        object: 
+        # events: 
           inclusive:
             - "{pt} > 100"
+        # object:
+          # inclusive:
+            - "abs({eta}) < 5" 

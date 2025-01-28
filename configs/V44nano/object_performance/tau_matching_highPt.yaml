@@ -52,12 +52,14 @@
 #     max: 400
 #     step: 20
 
+# TODO: This config is almost an exact copy of tau_matching.yaml 
+# except thresholds and binning 
 TauTriggerBarrel_90perc_highPt:
   sample: VBFHToTauTau
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenVisTau:tau:barrel: "pt" # TODO: atm this Config is the same as tau_matching. Shouldnt there be a pt cut? 
+    GenVisTau:default:barrel: "pt" 
   test_objects:
     L1nnPuppiTau:default:barrel: "pt"
     L1hpsTau:default:barrel: "pt"
@@ -71,12 +73,15 @@ TauTriggerBarrel_90perc_highPt:
     max: 400
     step: 10
 
+
+# TODO: This config is almost an exact copy of tau_matching.yaml 
+# except thresholds and binning 
 TauTriggerEndcap_90perc_highPt:
   sample: VBFHToTauTau
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenVisTau:tau:barrel: "pt" # TODO same as above, atm it is the same as Config as tau_matching.yaml
+    GenVisTau:default:endcap: "pt"
   test_objects:
     L1nnPuppiTau:default:endcap: "pt"
     L1hpsTau:default:endcap: "pt"

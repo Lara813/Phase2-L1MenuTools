@@ -3,7 +3,7 @@ TauTriggerBarrel_90perc:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenVisTau:tau:barrel: "pt"
+    GenVisTau:_barrel: "pt"
   test_objects:
     L1nnPuppiTau:default:barrel: "pt"
     L1hpsTau:default:barrel: "pt"
@@ -25,7 +25,7 @@ TauTriggerEndcap_90perc:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenVisTau:tau:endcap: "pt"
+    GenVisTau:_endcap: "pt"
   test_objects:
     L1nnPuppiTau:default:endcap: "pt"
     L1hpsTau:default:endcap: "pt"
@@ -41,3 +41,5 @@ TauTriggerEndcap_90perc:
     min: 0
     max: 150
     step: 6
+
+    

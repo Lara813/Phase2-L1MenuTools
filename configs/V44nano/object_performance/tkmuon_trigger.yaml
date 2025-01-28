@@ -51,7 +51,7 @@ TkMuonsTrigger_Endcap:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenPart:muon:endcap: "eta"
+    GenPart:muon:endcap_muon: "eta"
   test_objects:
     # L1gmtMuon:default:endcap: "pt"
     # L1gmtTkMuon:default:endcap: "pt"
