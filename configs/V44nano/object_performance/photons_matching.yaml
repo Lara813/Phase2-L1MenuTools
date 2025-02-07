@@ -3,7 +3,7 @@ PhotonsMatching_Barrel:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenPart:photon_barrel: "pt" # TODO: Photon barrel region might be different from what is declared atm in GenPart
+    GenPart:photon:barrel: "pt" # TODO: Photon barrel region might be different from what is declared atm in GenPart
   test_objects:
     L1EG:default: "pt"
     L1tkPhoton:NoIso: "pt"
@@ -20,7 +20,7 @@ PhotonsMatching_Endcap:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenPart:photon_endcap: "pt"
+    GenPart:photon:endcap: "pt"
   test_objects:
     L1EG:default: "pt"
     L1tkPhoton:NoIso: "pt"

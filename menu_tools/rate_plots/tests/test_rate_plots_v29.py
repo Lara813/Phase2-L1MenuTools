@@ -14,10 +14,10 @@ import pytest
 from menu_tools.rate_plots import plotter
 
 
-
 testdata = [
     "HTRates",
 ]
+
 
 @pytest.mark.parametrize("test_name", testdata)
 def test_matching_plots_reproduced(test_name):
@@ -27,28 +27,33 @@ def test_matching_plots_reproduced(test_name):
         f"menu_tools/rate_plots/tests/reference_data/{test_name}.yaml",
     ]
 
-    # Record time before creating output 
+    # Record time before creating output
     time_stamp = datetime.now()
 
     # Run Plotting
     with patch.object(sys, "argv", testargs):
         plotter.main()
         pass
-    
+
     # Load result and assert correct outcome (Offline)
     for online_offline in ["Online", "Offline"]:
-    
-        output_path = Path(f"outputs/V29/rate_plots/V29_{online_offline}_{test_name}.json")
+        output_path = Path(
+            f"outputs/V29/rate_plots/V29_{online_offline}_{test_name}.json"
+        )
         output_dir = "outputs/V29/rate_plots"
-        # Assert: Check whether output files were created 
+        # Assert: Check whether output files were created
         assert output_path.exists(), f"Expected output {output_path} does not exist."
-        
-        # Assert: Check if file was put in correct directory
-        assert output_path.parent == Path(output_dir), f"Output file was not created in specified directory {output_dir}."
 
-        #Assert: Check whether new file was created or rather just existed before
+        # Assert: Check if file was put in correct directory
+        assert output_path.parent == Path(
+            output_dir
+        ), f"Output file was not created in specified directory {output_dir}."
+
+        # Assert: Check whether new file was created or rather just existed before
         file_creation_time = datetime.fromtimestamp(output_path.stat().st_mtime)
-        assert file_creation_time >= time_stamp, f"{output_path} already existed before plotter was called."
+        assert (
+            file_creation_time >= time_stamp
+        ), f"{output_path} already existed before plotter was called."
 
         with open(
             f"outputs/V29/rate_plots/V29_{online_offline}_{test_name}.json",
@@ -79,5 +84,3 @@ def test_matching_plots_reproduced(test_name):
                     raise e
             else:
                 assert val == test_result[key]
-
-

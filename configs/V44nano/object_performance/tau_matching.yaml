@@ -3,13 +3,12 @@ TausMatchingBarrel:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenVisTau:_barrel: "pt"
+    GenVisTau:default:barrel: "pt"
   test_objects:
     L1nnPuppiTau:default: "pt"
     L1hpsTau:default: "pt"
     L1caloTau:default: "pt"
     L1nnCaloTau:default: "pt"
-#     L1caloTau:PtGe20: "Pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (Barrel)"
   binning:
@@ -22,13 +21,12 @@ TausMatchingEndcap:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenVisTau:_endcap: "pt"
+    GenVisTau:default:endcap: "pt"
   test_objects:
     L1nnPuppiTau:default: "pt"
     L1hpsTau:default: "pt"
     L1caloTau:default: "pt"
     L1nnCaloTau:default: "pt"
-#     L1caloTau:PtGe20: "Pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (Endcap)"
   binning:
@@ -36,21 +34,3 @@ TausMatchingEndcap:
     max: 150
     step: 6
 
-# TausMatchingEndcap_Test:
-#   sample: VBFHToTauTau
-#   version: V44nano
-#   match_test_to_ref: True
-#   reference_object:
-#     GenVisTau:with_object:test_endcap: "pt"
-#   test_objects:
-#     L1nnPuppiTau:default: "pt"
-#     L1hpsTau:default: "pt"
-#     L1caloTau:default: "pt"
-#     L1nnCaloTau:default: "pt"
-# #     L1caloTau:PtGe20: "Pt"
-#   xlabel: "Gen. $p_T$ (GeV)"
-#   ylabel: "Matching Efficiency (Endcap)"
-#   binning:
-#     min: 0
-#     max: 150
-#     step: 6

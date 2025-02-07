@@ -3,7 +3,7 @@ MuonsTrigger_Barrel:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenPart:muon:barrel_muon: "eta"
+    GenPart:muon_barrel: "eta"
   test_objects:
     L1gmtMuon:default:barrel: "pt"
     L1gmtTkMuon:default:barrel: "pt"
@@ -23,7 +23,7 @@ MuonsTrigger_Overlap:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenPart:muon:overlap: "eta"
+    GenPart:muon_overlap: "eta"
   test_objects:
     L1gmtMuon:default:overlap: "pt"
     L1gmtTkMuon:default:overlap: "pt"
@@ -43,7 +43,7 @@ MuonsTrigger_Endcap:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenPart:muon:endcap_muon: "eta"
+    GenPart:muon_trigger_endcap: "eta"
   test_objects:
     L1gmtMuon:default:endcap: "pt"
     L1gmtTkMuon:default:endcap: "pt"

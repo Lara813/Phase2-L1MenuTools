@@ -1,22 +1,22 @@
-Purity_Muons_Barrel:
-  sample: DYLL_M50
-  version: V44nano
-  match_test_to_ref: True
-  reference_object:
-    L1gmtTkMuon:VLoose:barrel: "pt" 
-  test_objects:
-    GenPart:muon: "pt"
-    L1gmtTkMuon:VLoose:barrel: "pt"
-    # L1gmtMuon:default:barrel: "pt"
-    # L1tkElectron:NoIso: "pt"
-    # L1tkElectron:NoIsoNoLowPtID: "pt"
-    # L1tkElectron:Iso: "pt"
-  xlabel: "L1 TkMuon. $p_T$ (GeV)"
-  ylabel: "Matching Efficiency (Barrel)"
-  binning:
-    min: 0
-    max: 100
-    step: 3
+# Purity_Muons_Barrel:
+#   sample: DYLL_M50
+#   version: V44nano
+#   match_test_to_ref: True
+#   reference_object:
+#     L1gmtTkMuon:VLoose:barrel: "pt" 
+#   test_objects:
+#     GenPart:muon: "pt"
+#     L1gmtTkMuon:VLoose:barrel: "pt"
+#     # L1gmtMuon:default:barrel: "pt"
+#     # L1tkElectron:NoIso: "pt"
+#     # L1tkElectron:NoIsoNoLowPtID: "pt"
+#     # L1tkElectron:Iso: "pt"
+#   xlabel: "L1 TkMuon. $p_T$ (GeV)"
+#   ylabel: "Matching Efficiency (Barrel)"
+#   binning:
+#     min: 0
+#     max: 100
+#     step: 3
 
 # Purity_Muons_Overlap:
 #   sample: DYLL_M50

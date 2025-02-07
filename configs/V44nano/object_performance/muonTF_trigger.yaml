@@ -3,7 +3,7 @@ MuonTFsTrigger_Barrel:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenPart:muon:barrel_muon: "eta"
+    GenPart:muon_barrel: "eta"
   test_objects:
     L1gmtMuon:default:barrel: "pt"
     L1MuonKMTF:default:barrel: "pt"

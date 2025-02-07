@@ -38,7 +38,7 @@ ElectronsMatchingEndcap:
   version: V44nano
   match_test_to_ref: True
   reference_object:
-    GenPart:electron_endcap: "pt"
+    GenPart:electron:endcap: "pt"
   test_objects:
     L1EG:default: "pt"
     L1tkElectron:NoIso: "pt"

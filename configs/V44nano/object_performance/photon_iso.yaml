@@ -4,7 +4,7 @@ PhotonIsolation_Barrel:
   iso_vs_efficiency: True
   match_test_to_ref: True
   reference_object:
-    GenPart:photon:barrel: "pt"
+    GenPart:photon_barrel:barrel_iso: "pt"
   test_objects:
     L1tkPhoton:NoIso:barrel: "relIso"
   xlabel: "Isolation"
@@ -20,7 +20,7 @@ PhotonIsolation_Endcap:
   iso_vs_efficiency: True
   match_test_to_ref: True
   reference_object:
-    GenPart:photon:endcap_photon: "pt" 
+    GenPart:photon_endcap:endcap_iso: "pt" 
   test_objects:
     L1tkPhoton:NoIso:endcap: "relIso"
   xlabel: "Isolation"
