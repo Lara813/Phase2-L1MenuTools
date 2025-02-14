@@ -301,6 +301,7 @@ class TurnOnCollection:
                 continue
             if "eta" not in self.ak_arrays[str(test_obj)].fields:
                 self.ak_arrays[str(test_obj)]["eta"] = 0
+            # __import__("IPython").embed()
             for (
                 range_i,
                 range_cuts,

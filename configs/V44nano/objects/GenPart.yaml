@@ -70,6 +70,16 @@ GenPart:
           inclusive:
             - "abs({eta}) < 3.0"
 # ==MUONS=======================================
+    muon:
+      label: "Gen Muons"
+      cuts:
+        event:
+          inclusive:
+            - "(({statusFlags}>>7)&1) == 1"
+            - "abs({pdgId}) == 13"
+        object:
+          inclusive:
+             - "abs({eta}) < 2.4" 
     muon_barrel:
       label: "Gen Muons"
       cuts:

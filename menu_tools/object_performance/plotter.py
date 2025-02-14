@@ -344,6 +344,7 @@ class EfficiencyCentral:
         for it and passes it to the EfficiencyPlotter for
         plotting.
         """
+        
         for plot_name, cfg_plot in self.cfg_plots.items():
             for threshold in self.get_thresholds(cfg_plot):
                 print(f">>> Turn On {plot_name} ({threshold} GeV) <<<")

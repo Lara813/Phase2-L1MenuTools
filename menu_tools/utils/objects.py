@@ -187,8 +187,18 @@ class Object(BaseObject):
     # and  now it is all dumped in inclusive which is somewhat misleading
     def cuts(self) -> dict[str, list[str]]:
         _cuts = {}
+
         if "cuts" in self._object_params.keys():
             _cuts = self._object_params["cuts"]
+        # NOTE: This is a quick fix for the purity plots to have Gen particles also as test objects
+        for event_object_level in ["event", "object"]:
+            if event_object_level in _cuts:
+                for key in _cuts[event_object_level].keys():
+                    if key in _cuts:
+                        _cuts[key].extend(_cuts[event_object_level][key])
+                    else:
+                        _cuts[key] = _cuts[event_object_level][key]
+                _cuts.pop(event_object_level)
         if self.eta_range != "inclusive":
             # if a region other than inclusive is specified, add an eta cut
             eta_min = self.eta_ranges[self.eta_range][0]
