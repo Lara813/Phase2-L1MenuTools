@@ -1,0 +1,21 @@
+MuonsTrigger_Endcap:
+  binning:
+    max: 50
+    min: 0
+    step: 1.5
+  match_test_to_ref: true
+  reference_object:
+    GenPart:reference_muon:endcap_muon: eta
+  sample: DYLL_M50
+  scalings:
+    method: naive
+    threshold: 0.95
+  test_objects:
+    L1gmtMuon:default:endcap: pt
+    L1gmtTkMuon:default:endcap: pt
+  thresholds:
+  - 20
+  - 25
+  version: V44nano
+  xlabel: Gen. pT (GeV)
+  ylabel: Trigger Efficiency (endcap, L1 $p_T > 20$ GeV)

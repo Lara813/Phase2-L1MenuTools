@@ -1,0 +1,18 @@
+TkMuonsMatchingOverlap:
+  binning:
+    max: 100
+    min: 0
+    step: 3
+  match_test_to_ref: true
+  reference_object:
+    GenPart:muon:overlap: pt
+  sample: DYLL_M50
+  test_objects:
+    L1gmtTkMuon:Loose:overlap: pt
+    L1gmtTkMuon:Medium:overlap: pt
+    L1gmtTkMuon:Tight:overlap: pt
+    L1gmtTkMuon:VLoose:overlap: pt
+    L1gmtTkMuon:default:overlap: pt
+  version: V44nano
+  xlabel: Gen. $p_T$ (GeV)
+  ylabel: Matching Efficiency (overlap)

@@ -1,0 +1,23 @@
+MET_90perc:
+  binning:
+    max: 500
+    min: 0
+    step: 20
+  reference_object:
+    GenMET:default: pt
+  sample: TT
+  scalings:
+    method: naive
+    threshold: 0.9
+  test_objects:
+    L1TrackMET:default: pt
+    L1puppiMET:default: pt
+    L1puppiMLMET:default: pt
+  thresholds:
+  - 125
+  - 150
+  - 175
+  - 200
+  version: V44nano
+  xlabel: Gen. MET (GeV)
+  ylabel: Trigger Efficiency (<threshold> GeV)

@@ -6,8 +6,8 @@ Purity_Muons_Barrel:
     L1gmtTkMuon:VLoose:barrel: "pt" 
   test_objects:
     GenPart:muon: "pt"
-    L1gmtTkMuon:VLoose:barrel: "pt"
-    # L1gmtMuon:default:barrel: "pt"
+    # L1gmtTkMuon:VLoose:barrel: "pt"
+    L1gmtMuon:default:barrel: "pt"
     # L1tkElectron:NoIso: "pt"
     # L1tkElectron:NoIsoNoLowPtID: "pt"
     # L1tkElectron:Iso: "pt"

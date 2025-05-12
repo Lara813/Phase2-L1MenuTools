@@ -1,0 +1,17 @@
+TausMatchingBarrel:
+  binning:
+    max: 150
+    min: 0
+    step: 6
+  match_test_to_ref: true
+  reference_object:
+    GenVisTau:tau:barrel: pt
+  sample: VBFHToTauTau
+  test_objects:
+    L1caloTau:default: pt
+    L1hpsTau:default: pt
+    L1nnCaloTau:default: pt
+    L1nnPuppiTau:default: pt
+  version: V44nano
+  xlabel: Gen. $p_T$ (GeV)
+  ylabel: Matching Efficiency (Barrel)

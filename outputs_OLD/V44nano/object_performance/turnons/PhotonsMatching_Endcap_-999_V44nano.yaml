@@ -1,0 +1,16 @@
+PhotonsMatching_Endcap:
+  binning:
+    max: 100
+    min: 0
+    step: 3
+  match_test_to_ref: true
+  reference_object:
+    GenPart:photon:endcap_photon: pt
+  sample: Hgg
+  test_objects:
+    L1EG:default: pt
+    L1tkPhoton:Iso: pt
+    L1tkPhoton:NoIso: pt
+  version: V44nano
+  xlabel: Gen. $p_T$ (GeV)
+  ylabel: Matching Efficiency (Endcap)

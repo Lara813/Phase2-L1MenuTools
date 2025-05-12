@@ -1,0 +1,20 @@
+TauTriggerBarrel_90perc_highPt:
+  binning:
+    max: 400
+    min: 0
+    step: 10
+  match_test_to_ref: true
+  reference_object:
+    GenVisTau:tau:barrel: pt
+  sample: VBFHToTauTau
+  test_objects:
+    L1caloTau:default:barrel: pt
+    L1hpsTau:default:barrel: pt
+    L1nnCaloTau:default:barrel: pt
+    L1nnPuppiTau:default:barrel: pt
+  thresholds:
+  - 30
+  - 50
+  version: V44nano
+  xlabel: Gen. pT (GeV)
+  ylabel: Trigger Efficiency (barrel, L1 $p_T > <threshold>$ GeV)

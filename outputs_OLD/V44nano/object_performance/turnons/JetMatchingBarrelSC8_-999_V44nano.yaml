@@ -1,0 +1,14 @@
+JetMatchingBarrelSC8:
+  binning:
+    max: 500
+    min: 0
+    step: 10
+  match_test_to_ref: true
+  reference_object:
+    GenJetAK8:jet_barrel: pt
+  sample: TT
+  test_objects:
+    L1puppiJetSC8:default:barrel: pt
+  version: V44nano
+  xlabel: Gen. $p_T$ (GeV)
+  ylabel: Matching Efficiency (<threshold> GeV, barrel)

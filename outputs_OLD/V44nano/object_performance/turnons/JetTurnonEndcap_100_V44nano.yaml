@@ -1,0 +1,22 @@
+JetTurnonEndcap:
+  binning:
+    max: 500
+    min: 0
+    step: 10
+  match_test_to_ref: true
+  reference_object:
+    GenJet:jet_endcap: pt
+  sample: TT
+  scalings:
+    method: naive
+    threshold: 0.95
+  test_objects:
+    L1TrackJet:default:endcap: pt
+    L1caloJet:default:endcap: pt
+    L1puppiJetSC4:default:endcap: pt
+  thresholds:
+  - 50
+  - 100
+  version: V44nano
+  xlabel: Gen. $p_T$ (GeV)
+  ylabel: Trigger Efficiency (<threshold> GeV, endcap)

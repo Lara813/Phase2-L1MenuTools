@@ -13,6 +13,26 @@ L1nnPuppiTau:
           # - "{passLooseNN}==1"
           # Current IB (22 Feb recipe) does not have updated WP, so cut on NN score rather than checking passLooseNN
           - "{chargedIso} > 0.22"
+    purity:
+      cuts:
+        inclusive:
+          # - "abs({eta}) < 1.5"
+          - "{passLooseNN}==1"
+          - "abs({eta}) < 2.4"
+    purity_Pt40:
+      cuts:
+        inclusive:
+          # - "abs({eta}) < 1.5"
+          - "{passLooseNN}==1"
+          - "{pt} > 40"
+          - "abs({eta}) < 2.4"
+    purity_Pt100:
+      cuts:
+        inclusive:
+          # - "abs({eta}) < 1.5"
+          - "{passLooseNN}==1"
+          - "{pt} > 100"
+          - "abs({eta}) < 2.4"
 
 L1hpsTau:
   label: "HPS Tau"

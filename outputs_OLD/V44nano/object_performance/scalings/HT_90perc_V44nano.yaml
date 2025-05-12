@@ -1,0 +1,19 @@
+HT_90perc:
+  binning:
+    max: 750
+    min: 0
+    step: 20
+  reference_object:
+    GenJet:ht_default: pt
+  sample: TT
+  scalings:
+    method: naive
+    threshold: 0.9
+  test_objects:
+    L1TrackHT:HT: ht
+    L1puppiJetSC4sums:HT: pt
+  thresholds:
+  - 350
+  version: V44nano
+  xlabel: Gen. HT (GeV)
+  ylabel: Trigger Efficiency (<threshold> GeV)

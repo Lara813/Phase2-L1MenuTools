@@ -1,0 +1,14 @@
+JetMatching_Eta_Pt100ToInf_extEta:
+  binning:
+    max: 5.5
+    min: -5.5
+    step: 0.25
+  match_test_to_ref: true
+  reference_object:
+    GenJet:jet_Pt100ToInf_extEta: eta
+  sample: TT
+  test_objects:
+    L1caloJet:default: eta
+  version: V44nano
+  xlabel: Gen. $\eta$
+  ylabel: Matching Efficiency (>100 GeV)

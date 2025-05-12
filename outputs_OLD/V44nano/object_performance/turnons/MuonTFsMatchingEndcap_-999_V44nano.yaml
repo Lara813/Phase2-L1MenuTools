@@ -1,0 +1,18 @@
+MuonTFsMatchingEndcap:
+  binning:
+    max: 100
+    min: 0
+    step: 3
+  match_test_to_ref: true
+  reference_object:
+    GenPart:muon:endcap_muon: pt
+  sample: DYLL_M50
+  test_objects:
+    L1MuonEMTF:default:endcap: pt
+    L1MuonKMTF:default:endcap: pt
+    L1MuonOMTF:default:endcap: pt
+    L1gmtMuon:default:endcap: pt
+    L1gmtTkMuon:default:endcap: pt
+  version: V44nano
+  xlabel: Gen. $p_T$ (GeV)
+  ylabel: Matching Efficiency (endcap)

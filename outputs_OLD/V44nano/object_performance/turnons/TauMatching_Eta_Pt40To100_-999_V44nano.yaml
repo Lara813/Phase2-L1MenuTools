@@ -1,0 +1,17 @@
+TauMatching_Eta_Pt40To100:
+  binning:
+    max: 3.0
+    min: -3.0
+    step: 0.2
+  match_test_to_ref: true
+  reference_object:
+    GenVisTau:tau_Pt40To100:test_inclusive: eta
+  sample: VBFHToTauTau
+  test_objects:
+    L1caloTau:default: eta
+    L1hpsTau:default: eta
+    L1nnCaloTau:default: eta
+    L1nnPuppiTau:default: eta
+  version: V44nano
+  xlabel: Gen. $\eta$
+  ylabel: Matching Efficiency (40-100 GeV)

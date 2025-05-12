@@ -1,0 +1,17 @@
+JetMatching_Eta_Pt40To100:
+  binning:
+    max: 5
+    min: -5
+    step: 0.25
+  match_test_to_ref: true
+  reference_object:
+    GenJet:jet_Pt40To100: eta
+  sample: TT
+  test_objects:
+    L1TrackJet:default: eta
+    L1caloJet:default: eta
+    L1puppiJetHisto:default: eta
+    L1puppiJetSC4:default: eta
+  version: V44nano
+  xlabel: Gen. $\eta$
+  ylabel: Matching Efficiency (40-100 GeV)

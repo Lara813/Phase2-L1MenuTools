@@ -1,0 +1,18 @@
+TkMuonsMatchingBarrel:
+  binning:
+    max: 100
+    min: 0
+    step: 3
+  match_test_to_ref: true
+  reference_object:
+    GenPart:muon:barrel_muon: pt
+  sample: DYLL_M50
+  test_objects:
+    L1gmtTkMuon:Loose:barrel: pt
+    L1gmtTkMuon:Medium:barrel: pt
+    L1gmtTkMuon:Tight:barrel: pt
+    L1gmtTkMuon:VLoose:barrel: pt
+    L1gmtTkMuon:default:barrel: pt
+  version: V44nano
+  xlabel: Gen. $p_T$ (GeV)
+  ylabel: Matching Efficiency (barrel)

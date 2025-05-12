@@ -1,0 +1,21 @@
+MHT_50perc:
+  binning:
+    max: 500
+    min: 0
+    step: 20
+  reference_object:
+    GenJet:mht_default: pt
+  sample: TT
+  scalings:
+    method: naive
+    threshold: 0.5
+  test_objects:
+    L1TrackHT:MHT: mht
+    L1puppiHistoJetSums:MHT: pt
+    L1puppiJetSC4sums:MHT: pt
+  thresholds:
+  - 70
+  - 150
+  version: V44nano
+  xlabel: Gen. MHT30 (GeV)
+  ylabel: Trigger Efficiency (<threshold> GeV)

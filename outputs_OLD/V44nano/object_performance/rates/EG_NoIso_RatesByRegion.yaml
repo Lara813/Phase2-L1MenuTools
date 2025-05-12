@@ -1,0 +1,12 @@
+EG_NoIso_RatesByRegion:
+  binning:
+    max: 97
+    min: 10
+    step: 3
+  sample: MinBias
+  test_objects:
+  - L1EG:default:barrel
+  - L1EG:default:endcap
+  - L1tkElectron:NoIso:barrel
+  - L1tkElectron:NoIso:endcap
+  version: V44nano

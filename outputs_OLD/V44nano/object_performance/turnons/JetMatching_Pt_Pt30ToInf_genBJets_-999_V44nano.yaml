@@ -1,0 +1,14 @@
+JetMatching_Pt_Pt30ToInf_genBJets:
+  binning:
+    max: 200
+    min: 30
+    step: 10
+  match_test_to_ref: true
+  reference_object:
+    GenJet:jet_Pt30ToInf_genBJets: pt
+  sample: TT
+  test_objects:
+    L1puppiExtJetSC4:bjetnn: pt
+  version: V44nano
+  xlabel: Gen. $p_T$ (GeV)
+  ylabel: Matching Efficiency

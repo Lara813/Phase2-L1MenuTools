@@ -1,0 +1,23 @@
+TkMuonsTrigger_Overlap:
+  binning:
+    max: 50
+    min: 0
+    step: 1.5
+  match_test_to_ref: true
+  reference_object:
+    GenPart:muon:overlap: eta
+  sample: DYLL_M50
+  scalings:
+    method: naive
+    threshold: 0.95
+  test_objects:
+    L1gmtTkMuon:Loose:overlap: pt
+    L1gmtTkMuon:Medium:overlap: pt
+    L1gmtTkMuon:Tight:overlap: pt
+    L1gmtTkMuon:VLoose:overlap: pt
+  thresholds:
+  - 20
+  - 25
+  version: V44nano
+  xlabel: Gen. pT (GeV)
+  ylabel: Trigger Efficiency (overlap, L1 $p_T > 20$ GeV)

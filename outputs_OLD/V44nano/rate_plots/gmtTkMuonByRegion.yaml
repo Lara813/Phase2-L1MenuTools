@@ -1,0 +1,11 @@
+gmtTkMuonByRegion:
+  binning:
+    max: 75
+    min: 0
+    step: 3
+  sample: MinBias
+  test_objects:
+  - L1gmtTkMuon:default:barrel
+  - L1gmtTkMuon:default:overlap
+  - L1gmtTkMuon:default:endcap
+  version: V44nano

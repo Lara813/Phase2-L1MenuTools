@@ -1,0 +1,18 @@
+TkMuonsMatching_Eta_Pt15toInf:
+  binning:
+    max: 3
+    min: -3
+    step: 0.2
+  match_test_to_ref: true
+  reference_object:
+    GenPart:muon_Pt15toInf: eta
+  sample: DYLL_M50
+  test_objects:
+    L1gmtTkMuon:Loose: eta
+    L1gmtTkMuon:Medium: eta
+    L1gmtTkMuon:Tight: eta
+    L1gmtTkMuon:VLoose: eta
+    L1gmtTkMuon:default: eta
+  version: V44nano
+  xlabel: Gen. $\eta$
+  ylabel: Matching Efficiency (>15 GeV)

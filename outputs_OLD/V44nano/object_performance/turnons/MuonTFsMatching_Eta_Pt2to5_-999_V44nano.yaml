@@ -1,0 +1,18 @@
+MuonTFsMatching_Eta_Pt2to5:
+  binning:
+    max: 3
+    min: -3
+    step: 0.2
+  match_test_to_ref: true
+  reference_object:
+    GenPart:muon_Pt2to5: eta
+  sample: DYLL_M50
+  test_objects:
+    L1MuonEMTF:default: eta
+    L1MuonKMTF:default: eta
+    L1MuonOMTF:default: eta
+    L1gmtMuon:default: eta
+    L1gmtTkMuon:default: eta
+  version: V44nano
+  xlabel: Gen. $\eta$
+  ylabel: Matching Efficiency (2-5 GeV)

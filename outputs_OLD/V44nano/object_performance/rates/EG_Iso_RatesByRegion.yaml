@@ -1,0 +1,12 @@
+EG_Iso_RatesByRegion:
+  binning:
+    max: 97
+    min: 10
+    step: 3
+  sample: MinBias
+  test_objects:
+  - L1tkElectron:Iso:barrel
+  - L1tkElectron:Iso:endcap
+  - L1tkPhoton:Iso:barrel
+  - L1tkPhoton:Iso:endcap
+  version: V44nano

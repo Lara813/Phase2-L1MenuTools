@@ -1,0 +1,17 @@
+JetMatchingEndcap:
+  binning:
+    max: 500
+    min: 0
+    step: 10
+  match_test_to_ref: true
+  reference_object:
+    GenJet:jet_endcap: pt
+  sample: TT
+  test_objects:
+    L1TrackJet:default: pt
+    L1caloJet:default: pt
+    L1puppiJetHisto:default: pt
+    L1puppiJetSC4:default: pt
+  version: V44nano
+  xlabel: Gen. $p_T$ (GeV)
+  ylabel: Matching Efficiency (<threshold> GeV, endcap)
