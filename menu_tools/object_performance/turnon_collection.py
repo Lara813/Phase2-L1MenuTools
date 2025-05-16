@@ -191,6 +191,7 @@ class TurnOnCollection:
         and for some of which one number per jet is stored.
         """
         for test_obj, x_arg in self.test_objects:
+            # __import__("IPython").embed()
             try:
                 self.ak_arrays[str(test_obj)][x_arg] = ak.max(
                     self.ak_arrays[str(test_obj)][x_arg], axis=1
@@ -229,9 +230,10 @@ class TurnOnCollection:
 
     def _apply_list_of_reference_cuts(self, cut_list):
         for cut in cut_list:
-            cut = re.sub(r"{([^&|]*)}", r"self.ak_arrays['ref']['\1']", cut)
-            sel = eval(cut)
-            self.ak_arrays["ref"] = self.ak_arrays["ref"][sel]
+            if cut != "":
+                cut = re.sub(r"{([^&|]*)}", r"self.ak_arrays['ref']['\1']", cut)
+                sel = eval(cut)
+                self.ak_arrays["ref"] = self.ak_arrays["ref"][sel]
         if not isinstance(
             self.ak_arrays["ref"], vector.backends.awkward.MomentumArray4D
         ):
@@ -284,8 +286,10 @@ class TurnOnCollection:
                         abs(self.ak_arrays[str(test_obj)]["eta"])
                         < test_obj.eta_ranges[range_i][1]
                     )
-
-                    sel = eval(cut) + ~eta_sel
+                    if cut != "":
+                        sel = eval(cut) + ~eta_sel
+                    else: 
+                        sel = ~eta_sel
                     self.ak_arrays[str(test_obj)] = self.ak_arrays[str(test_obj)][sel]
 
     def _skim_to_hists(self) -> None:
