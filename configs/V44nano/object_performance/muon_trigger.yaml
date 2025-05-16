@@ -7,6 +7,8 @@ MuonsTrigger_Barrel:
   test_objects:
     L1gmtMuon:default:barrel: "pt"
     L1gmtTkMuon:default:barrel: "pt"
+    L1GTgmtMuon:default:barrel: "pt"
+    L1GTgmtTkMuon:default:barrel: "pt"
   xlabel: "Gen. pT (GeV)"
   ylabel: "Trigger Efficiency (barrel, L1 $p_T > 20$ GeV)"
   thresholds: [20, 25]
@@ -20,13 +22,15 @@ MuonsTrigger_Barrel:
 
 MuonsTrigger_Overlap:
   sample: DYLL_M50
-  version: V44nano
+  version: V44nano_GT
   match_test_to_ref: True
   reference_object:
     GenPart:muon_overlap: "eta"
   test_objects:
     L1gmtMuon:default:overlap: "pt"
     L1gmtTkMuon:default:overlap: "pt"
+    L1GTgmtMuon:default:overlap: "pt"
+    L1GTgmtTkMuon:default:overlap: "pt"
   xlabel: "Gen. pT (GeV)"
   ylabel: "Trigger Efficiency (overlap, L1 $p_T > 20$ GeV)"
   thresholds: [20, 25]
@@ -40,13 +44,15 @@ MuonsTrigger_Overlap:
 
 MuonsTrigger_Endcap:
   sample: DYLL_M50
-  version: V44nano
+  version: V44nano_GT
   match_test_to_ref: True
   reference_object:
     GenPart:muon_trigger_endcap: "eta"
   test_objects:
     L1gmtMuon:default:endcap: "pt"
     L1gmtTkMuon:default:endcap: "pt"
+    L1GTgmtMuon:default:endcap: "pt"
+    L1GTgmtTkMuon:default:endcap: "pt"
   xlabel: "Gen. pT (GeV)"
   ylabel: "Trigger Efficiency (endcap, L1 $p_T > 20$ GeV)"
   thresholds: [20, 25]

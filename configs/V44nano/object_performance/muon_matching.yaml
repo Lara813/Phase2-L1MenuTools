@@ -1,12 +1,14 @@
 MuonsMatchingBarrel:
   sample: DYLL_M50
-  version: V44nano
+  version: V44nano_GT
   match_test_to_ref: True
   reference_object:
     GenPart:muon_barrel: "pt"
   test_objects:
     L1gmtMuon:default:barrel: "pt"
     L1gmtTkMuon:default:barrel: "pt"
+    L1GTgmtMuon:default:barrel: "pt"
+    L1GTgmtTkMuon:default:barrel: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (barrel)"
   # thresholds: [-999]
@@ -20,13 +22,15 @@ MuonsMatchingBarrel:
 
 MuonsMatchingOverlap:
   sample: DYLL_M50
-  version: V44nano
+  version: V44nano_GT
   match_test_to_ref: True
   reference_object:
     GenPart:muon_overlap: "pt"
   test_objects:
     L1gmtMuon:default:overlap: "pt"
     L1gmtTkMuon:default:overlap: "pt"
+    L1GTgmtMuon:default:overlap: "pt"
+    L1GTgmtTkMuon:default:overlap: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (overlap)"
   binning:
@@ -41,8 +45,8 @@ MuonsMatchingEndcap:
   reference_object:
     GenPart:muon_endcap: "pt"
   test_objects:
-    L1gmtMuon:default:endcap: "pt"
-    L1gmtTkMuon:default:endcap: "pt"
+    L1GTgmtMuon:default:endcap: "pt"
+    L1GTgmtTkMuon:default:endcap: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (endcap)"
   binning:

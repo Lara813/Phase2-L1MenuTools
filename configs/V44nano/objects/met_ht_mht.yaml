@@ -18,12 +18,30 @@ L1puppiMET:
   ids:
     default: {}
 
+L1GTpuppiMET:
+  label: "Puppi MET"
+  ids:
+    default: {}
+
 L1puppiMLMET:
   label: "Puppi MLMET"
   ids:
     default: {}
 
 L1puppiJetSC4sums:
+  ids:
+    HT:
+      label: "SeededCone HT"
+      cuts:
+        inclusive:
+          - "{sumType} == 0"
+    MHT:
+      label: "SeededCone MHT"
+      cuts:
+        inclusive:
+          - "{sumType} == 1"
+
+L1GTscJetSum:
   ids:
     HT:
       label: "SeededCone HT"

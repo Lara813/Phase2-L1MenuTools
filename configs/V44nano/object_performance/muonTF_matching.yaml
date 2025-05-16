@@ -1,15 +1,18 @@
 MuonTFsMatchingBarrel:
   sample: DYLL_M50
-  version: V44nano
+  version: V44nano_GT
   match_test_to_ref: True
   reference_object:
     GenPart:muon_barrel: "pt"
   test_objects:
     L1gmtMuon:default:barrel: "pt"
-    L1MuonKMTF:default:barrel: "pt"
-    L1MuonOMTF:default:barrel: "pt"
-    L1MuonEMTF:default:barrel: "pt"
     L1gmtTkMuon:default:barrel: "pt"
+    L1GTgmtMuon:default:barrel: "pt"
+    L1GTgmtTkMuon:default:barrel: "pt"
+    ### No GT object available atm 
+    # L1MuonKMTF:default:barrel: "pt"
+    # L1MuonOMTF:default:barrel: "pt"
+    # L1MuonEMTF:default:barrel: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (barrel)"
   binning:
@@ -19,16 +22,19 @@ MuonTFsMatchingBarrel:
 
 MuonTFsMatchingOverlap:
   sample: DYLL_M50
-  version: V44nano
+  version: V44nano_GT
   match_test_to_ref: True
   reference_object:
     GenPart:muon_overlap: "pt"
   test_objects:
     L1gmtMuon:default:overlap: "pt"
-    L1MuonKMTF:default:overlap: "pt"
-    L1MuonOMTF:default:overlap: "pt"
-    L1MuonEMTF:default:overlap: "pt"
     L1gmtTkMuon:default:overlap: "pt"
+    L1GTgmtMuon:default:overlap: "pt"
+    L1GTgmtTkMuon:default:overlap: "pt"
+    ### No GT object available atm 
+    # L1MuonKMTF:default:overlap: "pt"
+    # L1MuonOMTF:default:overlap: "pt"
+    # L1MuonEMTF:default:overlap: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (overlap)"
   binning:
@@ -44,10 +50,13 @@ MuonTFsMatchingEndcap:
     GenPart:muon_endcap: "pt"
   test_objects:
     L1gmtMuon:default:endcap: "pt"
-    L1MuonKMTF:default:endcap: "pt"
-    L1MuonOMTF:default:endcap: "pt"
-    L1MuonEMTF:default:endcap: "pt"
     L1gmtTkMuon:default:endcap: "pt"
+    L1GTgmtMuon:default:endcap: "pt"
+    L1GTgmtTkMuon:default:endcap: "pt"
+    ### No GT object available atm 
+    # L1MuonKMTF:default:endcap: "pt"
+    # L1MuonOMTF:default:endcap: "pt"
+    # L1MuonEMTF:default:endcap: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (endcap)"
   binning:

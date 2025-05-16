@@ -1,15 +1,18 @@
 MuonTFsMatching_Eta_Pt2to5:
   sample: DYLL_M50
-  version: V44nano
+  version: V44nano_GT
   match_test_to_ref: True
   reference_object:
     GenPart:muon_Pt2to5: "eta"
   test_objects:
     L1gmtMuon:default: "eta"
-    L1MuonKMTF:default: "eta" # Kalman filter (actually barrel) track finder
-    L1MuonOMTF:default: "eta" # overlap track finder
-    L1MuonEMTF:default: "eta" # endcap track finder
+    L1GTgmtMuon:default: "eta"
     L1gmtTkMuon:default: "eta" # gmt global muon trigger
+    L1GTgmtTkMuon:default: "eta" 
+    ## No GT object available yet 
+    # L1MuonKMTF:default: "eta" # Kalman filter (actually barrel) track finder
+    # L1MuonOMTF:default: "eta" # overlap track finder
+    # L1MuonEMTF:default: "eta" # endcap track finder
   xlabel: "Gen. $\\eta$"
   ylabel: "Matching Efficiency (2-5 GeV)"
   binning:
@@ -19,16 +22,19 @@ MuonTFsMatching_Eta_Pt2to5:
 
 MuonTFsMatching_Eta_Pt15toInf:
   sample: DYLL_M50
-  version: V44nano
+  version: V44nano_GT
   match_test_to_ref: True
   reference_object:
     GenPart:muon_Pt15toInf: "eta"
   test_objects:
     L1gmtMuon:default: "eta"
-    L1MuonKMTF:default: "eta"
-    L1MuonOMTF:default: "eta"
-    L1MuonEMTF:default: "eta"
-    L1gmtTkMuon:default: "eta"
+    L1GTgmtMuon:default: "eta"
+    L1gmtTkMuon:default: "eta" # gmt global muon trigger
+    L1GTgmtTkMuon:default: "eta" 
+    ## No GT object available yet 
+    # L1MuonKMTF:default: "eta" # Kalman filter (actually barrel) track finder
+    # L1MuonOMTF:default: "eta" # overlap track finder
+    # L1MuonEMTF:default: "eta" # endcap track finder
   xlabel: "Gen. $\\eta$"
   ylabel: "Matching Efficiency (>15 GeV)"
   binning:

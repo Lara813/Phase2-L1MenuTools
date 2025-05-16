@@ -47,6 +47,55 @@ L1tkElectron:
           inclusive:
             - "abs({eta}) < 2.4"
 
+L1GTtkElectron:
+  label: "L1tkElectron"
+  match_dR: 0.15
+  eta_ranges:
+    inclusive: [0, 7]
+    barrel: [0, 1.479]
+    endcap: [1.479, 5]
+  ids:
+    NoIso:
+      label: "TkElectron"
+      cuts:
+        inclusive:
+          - "abs({eta}) < 2.4"
+          # - "{pt} > 5"
+        endcap:
+          - "({eleId} == 1) | ({pt} < 25)"
+        barrel:
+          - "{eleId} == 1"
+    NoIsoForIso:
+      # This id is exclusively used for the
+      # isoloation wp derivation
+      label: "TkElectron, no ID"
+      cuts:
+        inclusive:
+          - "abs({eta}) < 2.4"
+    Iso:
+      label: "TkIsoElectron"
+      cuts:
+        inclusive:
+          - "abs({eta}) < 2.4"
+        barrel:
+          - "abs({relIso}) < 0.13"
+        endcap:
+          - "abs({relIso}) < 0.28"
+    reference:
+      cuts:
+        event:
+          inclusive:
+            - "{eleId} == 1"
+    reference_endcap:
+      cuts:
+        event:
+          inclusive:
+            - "{eleId} == 1"
+            - "abs({eta}) > 1.5"
+        object:
+          inclusive:
+            - "abs({eta}) < 2.4"
+
 
 L1EG:
   match_dR: 0.2
