@@ -35,7 +35,7 @@ Purity_ElectronsEndcap:
     label: "L1GTtkElectron"
     cuts:
       event:
-        - "" # "{eleId} == 1"
+        - "({hwQual}>>1)&1==1" # "{eleId} == 1"
         - "abs({eta}) > 1.5"
       object:
         - "abs({eta}) < 2.4"

@@ -3,24 +3,14 @@ ElectronsMatching_Eta_Pt10to25:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "eta"
-    label: "Gen Electrons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 11"
-        - "{pt} < 25"
-        - "{pt} > 10"
-      object:
-        - "abs({eta}) < 3.0"
+    GenPart:electron_pt10to25: "eta"
   test_objects:
-    # L1EG:default: "eta"
-    L1GTtkElectron:NoIso: "eta"
-    L1tkElectron:NoIso: "eta"
-    # L1GTtkElectron:NoIsoNoLowPtID: "eta"
-    L1GTtkElectron:Iso: "eta"
+    # L1EG:default: "eta" No GT object available yet 
+    L1tkElectron:NoIso: "eta" 
+    L1GTtkElectron:NoIso: "eta" 
+    # L1tkElectron:NoIsoNoLowPtID: "eta"
     L1tkElectron:Iso: "eta"
+    L1GTtkElectron:Iso: "eta"
   xlabel: "Gen. $\\eta$"
   ylabel: "Matching Efficiency ($10 < p_T < 25$ GeV)"
   binning:
@@ -33,23 +23,14 @@ ElectronsMatching_Eta_Pt25toInf:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "eta"
-    label: "Gen Electrons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 11"
-        - "{pt} > 25"
-      object:
-        - "abs({eta}) < 3.0"
+    GenPart:electron_pt25toInf: "eta"
   test_objects:
-    # L1EG:default: "eta"
-    L1GTtkElectron:NoIso: "eta"
+    # L1EG:default: "eta" No GT object available yet 
     L1tkElectron:NoIso: "eta"
-    # L1GTtkElectron:NoIsoNoLowPtID: "eta"
-    L1GTtkElectron:Iso: "eta"
+    L1GTtkElectron:NoIso: "eta"
+    # L1tkElectron:NoIsoNoLowPtID: "eta"
     L1tkElectron:Iso: "eta"
+    L1GTtkElectron:Iso: "eta"
   xlabel: "Gen. $\\eta$"
   ylabel: "Matching Efficiency ($p_T > 25$ GeV)"
   binning:

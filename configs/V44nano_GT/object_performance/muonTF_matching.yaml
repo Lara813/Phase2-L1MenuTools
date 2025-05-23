@@ -3,23 +3,16 @@ MuonTFsMatchingBarrel:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "pt"
-    label: "Gen Muons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 13"
-      object:
-        - "abs({eta}) < 0.83"
+    GenPart:muon_barrel: "pt"
   test_objects:
-    L1GTgmtMuon:default:barrel: "pt"
     L1gmtMuon:default:barrel: "pt"
+    L1gmtTkMuon:default:barrel: "pt"
+    L1GTgmtMuon:default:barrel: "pt"
+    L1GTgmtTkMuon:default:barrel: "pt"
+    ### No GT object available atm 
     # L1MuonKMTF:default:barrel: "pt"
     # L1MuonOMTF:default:barrel: "pt"
     # L1MuonEMTF:default:barrel: "pt"
-    L1GTgmtTkMuon:default:barrel: "pt"
-    L1gmtTkMuon:default:barrel: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (barrel)"
   binning:
@@ -32,24 +25,16 @@ MuonTFsMatchingOverlap:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "pt"
-    label: "Gen Muons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 13"
-      object:
-        - "abs({eta}) > 0.83"
-        - "abs({eta}) < 1.24"
+    GenPart:muon_overlap: "pt"
   test_objects:
-    L1GTgmtMuon:default:overlap: "pt"
     L1gmtMuon:default:overlap: "pt"
+    L1gmtTkMuon:default:overlap: "pt"
+    L1GTgmtMuon:default:overlap: "pt"
+    L1GTgmtTkMuon:default:overlap: "pt"
+    ### No GT object available atm 
     # L1MuonKMTF:default:overlap: "pt"
     # L1MuonOMTF:default:overlap: "pt"
     # L1MuonEMTF:default:overlap: "pt"
-    L1gmtTkMuon:default:overlap: "pt"
-    L1GTgmtTkMuon:default:overlap: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (overlap)"
   binning:
@@ -62,24 +47,16 @@ MuonTFsMatchingEndcap:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "pt"
-    label: "Gen Muons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 13"
-      object:
-        - "abs({eta}) > 1.24"
-        - "abs({eta}) < 2.4"
+    GenPart:muon_endcap: "pt"
   test_objects:
-    L1GTgmtMuon:default:endcap: "pt"
     L1gmtMuon:default:endcap: "pt"
+    L1gmtTkMuon:default:endcap: "pt"
+    L1GTgmtMuon:default:endcap: "pt"
+    L1GTgmtTkMuon:default:endcap: "pt"
+    ### No GT object available atm 
     # L1MuonKMTF:default:endcap: "pt"
     # L1MuonOMTF:default:endcap: "pt"
     # L1MuonEMTF:default:endcap: "pt"
-    L1GTgmtTkMuon:default:endcap: "pt"
-    L1gmtTkMuon:default:endcap: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (endcap)"
   binning:

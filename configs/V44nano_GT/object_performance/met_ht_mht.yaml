@@ -2,19 +2,12 @@ HT_90perc:
   sample: TT
   version: V44nano_GT
   reference_object:
-    object: "GenJet"
-    x_arg: "pt"
-    label: "Gen HT"
-    trafo: "HT"
-    cuts:
-       object:
-         - "abs({eta}) < 2.4"
-         - "{pt} > 30"
+    GenJet:ht_default: "pt"
   test_objects:
     # L1puppiHistoJetSums:HT: "pt"
     L1puppiJetSC4sums:HT: "pt"
-    L1GTscJetSum:HT: "ht"
-    # L1TrackHT:HT: "ht"
+    L1GTscJetSum:HT: "pt"
+    # L1TrackHT:HT: "ht" No GT object atm
   thresholds: [350]
   scalings:
     method: "naive"
@@ -28,16 +21,9 @@ HT_90perc:
 
 # TkHT_90perc:
 #   sample: TT
-#   version: V44nano_GT
+#   version: V44nano
 #   reference_object:
-#     object: "GenJet"
-#     x_arg: "pt"
-#     label: "Gen HT"
-#     trafo: "HT"
-#     cuts:
-#        object:
-#          - "abs({eta}) < 2.4"
-#          - "{pt} > 30"
+#     GenJet:ht_default: "pt"
 #   test_objects:
 #     # L1puppiHistoJetSums:HT: "pt"
 #     L1puppiJetSC4sums:HT: "pt"
@@ -57,19 +43,12 @@ MHT_50perc:
   sample: TT
   version: V44nano_GT
   reference_object:
-    object: "GenJet"
-    x_arg: "pt"
-    label: "Gen MHT"
-    cuts:
-      object:
-        - "abs({eta}) < 2.4"
-        - "{pt} > 30"
-    trafo: "MHT"
+    GenJet:mht_default: "pt"
   test_objects:
-    # L1puppiHistoJetSums:MHT: "pt"
+    # L1puppiHistoJetSums:MHT: "pt" No GT object available atm 
     L1puppiJetSC4sums:MHT: "pt"
-    L1GTscJetSum:MHT: "mht"
-    # L1TrackHT:MHT: "mht"
+    L1GTscJetSCum:MHT: "pt"
+    # L1TrackHT:MHT: "mht" No GT object available atm 
   thresholds: [70, 150]
   scalings:
     method: "naive"
@@ -83,15 +62,13 @@ MHT_50perc:
 
 MET_90perc:
   sample: TT
-  version: V44nano_GT
+  version: V44nano
   reference_object:
-    object: "GenMET"
-    x_arg: "pt"
-    label: "Gen MET"
+    GenMET:default: "pt"
   test_objects:
-    L1GTpuppiMET:default: "pt"
+    L1puppiMET:default: "pt"
     L1puppiMLMET:default: "pt"
-    # L1TrackMET:default: "pt"
+    L1TrackMET:default: "pt"
   thresholds: [125, 150, 175, 200]
   xlabel: "Gen. MET (GeV)"
   ylabel: "Trigger Efficiency (<threshold> GeV)"
@@ -105,13 +82,11 @@ MET_90perc:
 
 # MET_90perc_scTanh:
 #   sample: TT
-#   version: V44nano_GT
+#   version: V44nano
 #   reference_object:
-#     object: "GenMET"
-#     x_arg: "pt"
-#     label: "Gen MET"
+#     GenMET:default: "pt"
 #   test_objects:
-#     L1GTpuppiMET:default: "pt"
+#     L1puppiMET:default: "pt"
 #     L1puppiMLMET:default: "pt"
 #     L1TrackMET:default: "pt"
 #   thresholds: [125, 150, 175]

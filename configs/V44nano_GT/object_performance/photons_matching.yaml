@@ -3,20 +3,13 @@ PhotonsMatching_Barrel:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "pt"
-    label: "Gen Photons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 22"
-        - "abs({eta}) < 1.5"
-      object:
-        - "abs({eta}) < 2.4"
+    GenPart:photon:barrel: "pt"
   test_objects:
-    L1EG:default: "pt"
+    # L1EG:default: "pt" No GT object available atm 
     L1GTtkPhoton:NoIso: "pt"
     L1GTtkPhoton:Iso: "pt"
+    L1tkPhoton:NoIso: "pt"
+    L1tkPhoton:Iso: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (Barrel)"
   binning:
@@ -29,18 +22,9 @@ PhotonsMatching_Endcap:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "pt"
-    label: "Gen Photons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 22"
-        - "abs({eta}) > 1.5"
-      object:
-        - "abs({eta}) < 2.4"
+    GenPart:photon:endcap: "pt"
   test_objects:
-    L1EG:default: "pt"
+    # L1EG:default: "pt" No GT object available atm 
     L1GTtkPhoton:NoIso: "pt"
     L1GTtkPhoton:Iso: "pt"
     L1tkPhoton:NoIso: "pt"

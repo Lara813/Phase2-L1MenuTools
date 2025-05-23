@@ -1,0 +1,137 @@
+Comparison Results:
+=====================================================================
+electrons: 
+-----------------------------------------------------------------------------
+Comparing L1GTtkElectron - L1tkElectron from DYLL
+Branch hwQual has 102603 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 102603 mismatches in number of entries and 0 mismatches in values of entries
+Branch relIso has 102603 mismatches in number of entries and 0 mismatches in values of entries
+Branch z0 has 102603 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 102603 mismatches in number of entries and 0 mismatches in values of entries
+Branch charge has 102603 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 102603 mismatches in number of entries and 0 mismatches in values of entries
+Branch hwIso has 102603 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTtkElectron - L1tkElectron from MinBias
+Branch hwQual has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch relIso has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch z0 has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch charge has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch hwIso has 147856 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTtkElectron - L1tkElectron from MinBias
+Branch hwQual has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch relIso has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch z0 has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch charge has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 147856 mismatches in number of entries and 0 mismatches in values of entries
+Branch hwIso has 147856 mismatches in number of entries and 0 mismatches in values of entries
+jets: 
+-----------------------------------------------------------------------------
+Comparing L1GTsc4Jet - L1puppiJetSC4 from MinBias
+Branch pt has 1888382 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 1888382 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 1888382 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTsc8Jet - L1puppiJetSC8 from MinBias
+Branch pt has 1404161 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 1404161 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 1404161 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTscJetSum - L1puppiJetSC4sums from MinBias
+-----------------------------------------------------------------------------
+Comparing L1GTsc4Jet - L1puppiJetSC4 from TT
+Branch pt has 245890 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 245890 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 245890 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTsc8Jet - L1puppiJetSC8 from TT
+Branch pt has 179983 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 179983 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 179983 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTscJetSum - L1puppiJetSC4sums from TT
+muons: 
+-----------------------------------------------------------------------------
+Comparing L1GTgmtDispMuon - L1gmtDispMuon from DYLL
+Branch hwQual has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch z0 has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch charge has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 0 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTgmtMuon - L1gmtMuon from DYLL
+Branch hwQual has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch z0 has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch charge has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 0 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTgmtTkMuon - L1gmtTkMuon from DYLL
+Branch hwQual has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch z0 has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch charge has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 0 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTgmtDispMuon - L1gmtDispMuon from MinBias
+Branch hwQual has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch z0 has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch charge has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 0 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTgmtMuon - L1gmtMuon from MinBias
+Branch hwQual has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch z0 has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch charge has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 0 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTgmtTkMuon - L1gmtTkMuon from MinBias
+Branch hwQual has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch z0 has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch charge has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 0 mismatches in number of entries and 0 mismatches in values of entries
+taus: 
+-----------------------------------------------------------------------------
+Comparing L1GTnnTau - L1nnPuppiTau from MinBias
+Branch z0 has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 0 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTnnTau - L1nnPuppiTau from VBFHToTauTau
+Branch z0 has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 0 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 0 mismatches in number of entries and 0 mismatches in values of entries
+photons: 
+-----------------------------------------------------------------------------
+Comparing L1GTtkPhoton - L1tkPhoton from MinBias
+Branch hwQual has 1999291 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 1999291 mismatches in number of entries and 0 mismatches in values of entries
+Branch relIso has 1999291 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 1999291 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 1999291 mismatches in number of entries and 0 mismatches in values of entries
+Branch hwIso has 1999291 mismatches in number of entries and 0 mismatches in values of entries
+-----------------------------------------------------------------------------
+Comparing L1GTtkPhoton - L1tkPhoton from Hgg
+Branch hwQual has 49940 mismatches in number of entries and 0 mismatches in values of entries
+Branch phi has 49940 mismatches in number of entries and 0 mismatches in values of entries
+Branch relIso has 49940 mismatches in number of entries and 0 mismatches in values of entries
+Branch pt has 49940 mismatches in number of entries and 0 mismatches in values of entries
+Branch eta has 49940 mismatches in number of entries and 0 mismatches in values of entries
+Branch hwIso has 49940 mismatches in number of entries and 0 mismatches in values of entries

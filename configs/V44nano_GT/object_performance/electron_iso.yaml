@@ -4,19 +4,10 @@ ElectronsIsolation_Barrel:
   match_test_to_ref: True
   iso_vs_efficiency: True
   reference_object:
-    object: "GenPart"
-    x_arg: "pt"
-    label: "Gen Electrons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 11"
-        - "abs({eta}) < 1.479"
-      object:
-        - "abs({eta}) < 1.479"
+    GenPart:electron_iso:barrel_iso: "pt"
   test_objects:
-    L1GTtkElectron:NoIsoForIso: "relIso"
     L1tkElectron:NoIsoForIso: "relIso"
+    L1GTtkElectron:NoIsoForIso: "relIso"
   xlabel: "Isolation"
   ylabel: "Efficiency (Barrel)"
   binning:
@@ -30,19 +21,10 @@ ElectronsIsolation_Endcap:
   match_test_to_ref: True
   iso_vs_efficiency: True
   reference_object:
-    object: "GenPart"
-    x_arg: "pt"
-    label: "Gen Electrons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 11"
-        - "abs({eta}) > 1.479"
-      object:
-        - "abs({eta}) < 2.4"
+    GenPart:electron:endcap_iso: "pt"
   test_objects:
-    L1GTtkElectron:NoIsoForIso: "relIso"
     L1tkElectron:NoIsoForIso: "relIso"
+    L1GTtkElectron:NoIsoForIso: "relIso"
   xlabel: "Isolation"
   ylabel: "Efficiency (Endcap)"
   binning:

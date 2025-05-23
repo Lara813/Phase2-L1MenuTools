@@ -3,29 +3,19 @@ TkMuonsMatching_Eta_Pt2to5:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "eta"
-    label: "Gen Muons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 13"
-        - "{pt} > 2"
-        - "{pt} < 5"
-      object:
-        - "abs({eta}) < 2.4"
+    GenPart:muon_Pt2to5: "eta"
   test_objects:
-    # L1GTgmtMuon:default: "eta"
-    L1GTgmtTkMuon:default: "eta"
-    L1GTgmtTkMuon:VLoose: "eta"
-    L1GTgmtTkMuon:Loose: "eta"
-    L1GTgmtTkMuon:Medium: "eta"
-    L1GTgmtTkMuon:Tight: "eta"
+    # L1gmtMuon:default: "eta"
     L1gmtTkMuon:default: "eta"
     L1gmtTkMuon:VLoose: "eta"
     L1gmtTkMuon:Loose: "eta"
     L1gmtTkMuon:Medium: "eta"
     L1gmtTkMuon:Tight: "eta"
+    L1GTgmtTkMuon:default: "eta"
+    L1GTgmtTkMuon:VLoose: "eta"
+    L1GTgmtTkMuon:Loose: "eta"
+    L1GTgmtTkMuon:Medium: "eta"
+    L1GTgmtTkMuon:Tight: "eta"
   xlabel: "Gen. $\\eta$"
   ylabel: "Matching Efficiency (2-5 GeV)"
   binning:
@@ -38,29 +28,19 @@ TkMuonsMatching_Eta_Pt15toInf:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "eta"
-    label: "Gen Muons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 13"
-        - "{pt} > 15"
-      object:
-        - "abs({eta}) < 2.4"
+    GenPart:muon_Pt15toInf: "eta"
   test_objects:
-    # L1GTgmtMuon:default: "eta"
-    L1GTgmtTkMuon:default: "eta"
-    L1GTgmtTkMuon:VLoose: "eta"
-    L1GTgmtTkMuon:Loose: "eta"
-    L1GTgmtTkMuon:Medium: "eta"
-    L1GTgmtTkMuon:Tight: "eta"
+    # L1gmtMuon:default: "eta"
     L1gmtTkMuon:default: "eta"
     L1gmtTkMuon:VLoose: "eta"
     L1gmtTkMuon:Loose: "eta"
     L1gmtTkMuon:Medium: "eta"
     L1gmtTkMuon:Tight: "eta"
-    
+    L1GTgmtTkMuon:default: "eta"
+    L1GTgmtTkMuon:VLoose: "eta"
+    L1GTgmtTkMuon:Loose: "eta"
+    L1GTgmtTkMuon:Medium: "eta"
+    L1GTgmtTkMuon:Tight: "eta"
   xlabel: "Gen. $\\eta$"
   ylabel: "Matching Efficiency (>15 GeV)"
   binning:

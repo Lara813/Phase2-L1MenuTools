@@ -1,3 +1,8 @@
+GenMET:
+  label: "Gen MET"
+  ids:
+    default: {}
+
 # phase1PuppiHT:
 #   label: "Histogrammed Puppi HT"
 #   ids:
@@ -8,8 +13,13 @@
 #   ids:
 #     default: {}
 
-L1GTpuppiMET:
+L1puppiMET:
   label: "Puppi MET"
+  ids:
+    default: {}
+
+L1GTpuppiMET:
+  label: "GT Puppi MET"
   ids:
     default: {}
 
@@ -24,25 +34,25 @@ L1puppiJetSC4sums:
       label: "SeededCone HT"
       cuts:
         inclusive:
-          - "" # "{sumType} == 0"
+          - "{sumType} == 0"
     MHT:
       label: "SeededCone MHT"
       cuts:
         inclusive:
-          - "" # "{sumType} == 1"
+          - "{sumType} == 1"
 
 L1GTscJetSum:
   ids:
     HT:
-      label: "SeededCone HT"
+      label: "GT SeededCone HT"
       cuts:
         inclusive:
-          - "" # "{sumType} == 0"
+          - "{sumType} == 0"
     MHT:
       label: "SeededCone MHT"
       cuts:
         inclusive:
-          - "" # "{sumType} == 1"
+          - "{sumType} == 1"
 
 L1puppiHistoJetSums:
   ids:
@@ -50,12 +60,12 @@ L1puppiHistoJetSums:
       label: "Histogrammed Puppi HT"
       cuts:
         inclusive:
-          - "" # "{sumType} == 0"
+          - "{sumType} == 0"
     MHT:
       label: "Histogrammed Puppi MHT"
       cuts:
         inclusive:
-          - "" # "{sumType} == 1"
+          - "{sumType} == 1"
 
 L1TrackHT:
   ids:

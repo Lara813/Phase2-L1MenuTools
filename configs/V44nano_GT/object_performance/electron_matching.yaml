@@ -1,25 +1,16 @@
 ElectronsMatchingBarrel:
-  sample: DYLL_M50
+  sample: DYLL_M50 # 
   version: V44nano_GT
-  match_test_to_ref: True
+  match_test_to_ref: True # Delta R matching 
   reference_object:
-    object: "GenPart"
-    x_arg: "pt"
-    label: "Gen Electrons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 11"
-        - "abs({eta}) < 1.5"
-      object:
-        - "abs({eta}) < 2.4"
+    GenPart:electron:barrel: "pt"
   test_objects:
-    # L1EG:default: "pt"
-    L1GTtkElectron:NoIso: "pt"
+    # L1EG:default: "pt" No GT object available yet 
     L1tkElectron:NoIso: "pt"
-    # L1GTtkElectron:NoIsoNoLowPtID: "pt"
-    L1GTtkElectron:Iso: "pt"
+    L1GTtkElectron:NoIso: "pt"
+    # L1tkElectron:NoIsoNoLowPtID: "pt"
     L1tkElectron:Iso: "pt"
+    L1GTtkElectron:Iso: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (Barrel)"
   binning:
@@ -29,23 +20,14 @@ ElectronsMatchingBarrel:
 
 # ElectronsMatchingBarrel_wPrunedGenPart:
 #   sample: DYLL_M50
-#   version: V44nano_GT
+#   version: V44nano
 #   match_test_to_ref: True
 #   reference_object:
-#     object: "GenPart"
-#     x_arg: "pt"
-#     label: "Gen Electrons"
-#     cuts:
-#       event:
-#         - "(({statusFlags}>>7)&1) == 1"
-#         - "abs({pdgId}) == 11"
-#         - "abs({eta}) < 1.5"
-#       object:
-#         - "abs({eta}) < 2.4"
+#     GenPart:reference_electron:barrel: "pt"
 #   test_objects:
 #     L1EG:default: "pt"
-#     L1GTtkElectron:NoIso: "pt"
-#     L1GTtkElectron:Iso: "pt"
+#     L1tkElectron:NoIso: "pt"
+#     L1tkElectron:Iso: "pt"
 #   xlabel: "Gen. $p_T$ (GeV)"
 #   ylabel: "Matching Efficiency (Barrel)"
 #   binning:
@@ -58,23 +40,14 @@ ElectronsMatchingEndcap:
   version: V44nano_GT
   match_test_to_ref: True
   reference_object:
-    object: "GenPart"
-    x_arg: "pt"
-    label: "Gen Electrons"
-    cuts:
-      event:
-        - "(({statusFlags}>>7)&1) == 1"
-        - "abs({pdgId}) == 11"
-        - "abs({eta}) > 1.5"
-      object:
-        - "abs({eta}) < 2.4"
+    GenPart:electron:endcap: "pt"
   test_objects:
-    # L1EG:default: "pt"
-    L1GTtkElectron:NoIso: "pt"
+    # L1EG:default: "pt" No GT object available atm
     L1tkElectron:NoIso: "pt"
-    # L1GTtkElectron:NoIsoNoLowPtID: "pt"
-    L1GTtkElectron:Iso: "pt"
+    L1GTtkElectron:NoIso: "pt"
+    # L1tkElectron:NoIsoNoLowPtID: "pt"
     L1tkElectron:Iso: "pt"
+    L1GTtkElectron:Iso: "pt"
   xlabel: "Gen. $p_T$ (GeV)"
   ylabel: "Matching Efficiency (Endcap)"
   binning:
@@ -84,23 +57,14 @@ ElectronsMatchingEndcap:
 
 # ElectronsMatchingEndcap_wPrunedGenPart:
 #   sample: DYLL_M50
-#   version: V44nano_GT
+#   version: V44nano
 #   match_test_to_ref: True
 #   reference_object:
-#     object: "GenPart"
-#     x_arg: "pt"
-#     label: "Gen Electrons"
-#     cuts:
-#       event:
-#         - "(({statusFlags}>>7)&1) == 1"
-#         - "abs({pdgId}) == 11"
-#         - "abs({eta}) > 1.5"
-#       object:
-#         - "abs({eta}) < 2.4"
+#     GenPart:reference_electron_endcap: "pt"
 #   test_objects:
 #     L1EG:default: "pt"
-#     L1GTtkElectron:NoIso: "pt"
-#     L1GTtkElectron:Iso: "pt"
+#     L1tkElectron:NoIso: "pt"
+#     L1tkElectron:Iso: "pt"
 #   xlabel: "Gen. $p_T$ (GeV)"
 #   ylabel: "Matching Efficiency (Endcap)"
 #   binning:

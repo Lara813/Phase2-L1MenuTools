@@ -1,0 +1,9 @@
+L1GTPV:
+  label: "Primary Vertex"
+  ids: 
+    default: {}
+
+L1PV:
+  label: "Primary Vertex"
+  ids: 
+    default: {}
